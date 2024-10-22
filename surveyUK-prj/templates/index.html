@@ -1,0 +1,109 @@
+<lhtml>
+  <head>
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
+
+  <title>Survey</title>
+  </head>
+  <body>
+    <div class="FormContentWrapper">
+      <div class="HeaderMast"></div>
+      <div class="CenteredContent">
+        <div class="FormCard">
+          <div class="Accent"></div>
+           <div class="FormContent">
+
+
+            <div id="app">
+                <div class="row" v-for="q_index in Object.keys(Questions)">
+                    <div class="col s8">
+                        <p for="interview">{{VueVAR}} {%raw%} {{Questions[q_index].questionTitle}} {%endraw%}</p>
+                    </div>
+                        <div class="col s4">
+                            <select @change="update_results(q_index, $event)">
+                                <option></option>
+                                <option :value="index" v-for="(opt, index) in questionAnswers" v-text="opt"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="mobileModal" class="modal">
+                        <div class="modal-background"></div>
+                   <div class="modal-card">
+                     <header class="modal-card-head">
+                       <p class="modal-card-title">Thank you!</p>
+                       <button class="delete" aria-label="close"></button>
+                     </header>
+                     <section class="modal-card-body">
+                       <div class="columns">
+                         <div class="column">
+                           <p>Thank you for taking the Survey</p>
+                        </div>
+                       </div>
+                     </section>
+                     <footer class="modal-card-foot">
+                       <button class="button is-survey">OK</button>
+                     </footer>
+                   </div>
+                 </div>
+
+                <div class="row">
+                    <div class="input-field col m6 s12">
+                        <button class="waves-effect waves-light btn-large" v-on:click="sendToServer()">Button</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      </div>
+   </div>
+</div>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="/survey_page.js"></script>
+<script src="../static/js/mobile-modal.js"></script>
+<script>
+var AppVue = new Vue({
+    el: '#app',
+    methods: {
+       update_results(q_index, event) 
+       {
+          this.results[q_index] = event.target.options.selectedIndex;
+          console.log(this.results);
+       },
+       sendToServer() 
+       { 
+        console.log(this.results);
+        axios.post("/", this.results)
+                    .then(function (response) 
+                    {
+                        response.data;
+                        console.log("as");
+                    })
+                    .catch(function (error) 
+                    {
+                        console.log(error);
+                    });
+       },
+    },
+    data () {
+        return {
+            results: {},
+            Questions: S_CONFIG.Questions,
+            questionAnswers:S_CONFIG.answers
+        }
+    },
+})
+</script>
+
+
+
+  </body>
+
+  </html>

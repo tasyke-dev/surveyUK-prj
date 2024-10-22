@@ -1,0 +1,206 @@
+{
+    "Questions":{
+
+       "1":{
+            "questionTitle":"I have felt terribly alone and isolated",
+            "flag": "F",
+            "Reversed": false
+       },
+        "2":{
+            "questionTitle":"I have felt tense, anxious or nervous",
+            "flag": "P",
+            "Reversed": false
+        },
+        "3":{
+            "questionTitle":"I have felt I have someone to turn to for support when needed",
+            "flag": "F",
+            "Reversed": true
+        },
+        "4":{
+            "questionTitle":"I have felt O.K. about myself",
+            "flag": "W",
+            "Reversed": true
+        },
+        "5":{
+            "questionTitle":"I have felt totally lacking in energy and enthusiasm",
+            "flag": "P",
+            "Reversed": false
+        },
+        "6":{
+            "questionTitle":"I have been physically violent to others",
+            "flag": "R",
+            "Reversed": false
+        },
+        "7": {
+            "questionTitle":"I have felt able to cope when things go wrong",
+            "flag": "F",
+            "Reversed": true
+        },
+        "8":{
+            "questionTitle":"I have been troubled by aches, pains or other physical problems",
+            "flag": "P",
+            "Reversed": false
+        },
+        "9":{
+            "questionTitle":"I have thought of hurting myself",
+            "flag": "R",
+            "Reversed": false,
+            "id":9
+        },
+        "10":{
+            "questionTitle":"Talking to people has felt too much for me",
+            "flag": "F",
+            "Reversed": false,
+            "id":10
+        },
+        "11":{
+            "questionTitle":"Tension and anxiety have prevented me doing important things",
+            "flag": "P",
+            "Reversed": false,
+            "id":11
+        },
+        "12": {
+            "questionTitle":"I have been happy with the things I have done",
+            "flag": "F",
+            "Reversed": true,
+            "id":12
+        },
+        "13": {
+            "questionTitle":"I have been disturbed by unwanted thoughts and feelings",
+            "flag": "P",
+            "Reversed": false,
+            "id":13
+        },
+        "14": {
+            "questionTitle":"I have felt like crying",
+            "flag": "W",
+            "Reversed": false,
+            "id":14
+        },
+        "15":{
+            "questionTitle":"I have felt panic or terror",
+            "flag": "P",
+            "Reversed": false,
+            "id":15
+        },
+        "16":{
+            "questionTitle":"I made plans to end my life",
+            "flag": "R",
+            "Reversed": false,
+            "id":16
+        },
+        "17":{
+            "questionTitle":"I have felt overwhelmed by my problems",
+            "flag": "W",
+            "Reversed": false,
+            "id":17
+        },
+        "18":{
+            "questionTitle":"I have had difficulty getting to sleep or staying asleep",
+            "flag": "P",
+            "Reversed": false,
+            "id":18
+        },
+        "19":{
+            "questionTitle":"I have felt warmth or affection for someone",
+            "flag": "F",
+            "Reversed": true,
+            "id":19
+        },
+        "20":{
+            "questionTitle":"My problems have been impossible to put to one side",
+            "flag": "P",
+            "Reversed": false,
+            "id":20
+        },
+        "21": {
+            "questionTitle":"I have been able to do most things I needed to",
+            "flag": "F",
+            "Reversed": true,
+            "id":21
+        },
+        "22":{
+            "questionTitle":"I have threatened or intimidated another person",
+            "flag": "R",
+            "Reversed": false,
+            "id":22
+        },
+        "23": {
+            "questionTitle":"I have felt despairing or hopeless",
+            "flag": "P",
+            "Reversed": false,
+            "id":23
+        },
+        "24": {
+            "questionTitle":"I have thought it would be better if I were dead",
+            "flag": "R",
+            "Reversed": false,
+            "id":24
+        },
+        "25": {
+            "questionTitle":"I have felt criticised by other people",
+            "flag": "F",
+            "Reversed": false,
+            "id":25
+        },
+        "26": {
+            "questionTitle":"I have thought I have no friends",
+            "flag": "F",
+            "Reversed": false,
+            "id":26
+        },
+        "27": {
+            "questionTitle":"I have felt unhappy",
+            "flag": "P",
+            "Reversed": false,
+            "id":27
+        },
+        "28":{
+            "questionTitle":"Unwanted images or memories have been distressing me",
+            "flag": "P",
+            "Reversed": false,
+            "id":28
+        },
+        "29":{
+            "questionTitle":"I have been irritable when with other people",
+            "flag": "F",
+            "Reversed": false,
+            "id":29
+        },
+        "30":{
+            "questionTitle":"I have thought I am to blame for my problems and difficulties",
+            "flag": "P",
+            "Reversed": false,
+            "id":30
+        },
+        "31":{
+            "questionTitle":"I have felt optimistic about my future",
+            "flag": "W",
+            "Reversed": true,
+            "id":31
+        },
+        "32":{
+            "questionTitle":"I have achieved the things I wanted to",
+            "flag": "F",
+            "Reversed": true,
+            "id":32
+        },
+        "33":{
+            "questionTitle":"I have felt humiliated or shamed by other people",
+            "flag": "F",
+            "Reversed": false,
+            "id":33
+        },
+        "34":{
+            "questionTitle":"I have hurt myself physically or taken dangerous risks with my health",
+            "flag": "R",
+            "Reversed": false,
+            "id":34
+        }
+    },
+    "answers":["Not at all",
+        "Only occasionally",
+        "Sometimes",
+        "Often",
+        "Most or all the time"]
+}

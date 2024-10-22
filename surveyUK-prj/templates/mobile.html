@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="\static\css\mobile.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+</head>
+
+<body>
+  
+  <div id='app'>  
+  <form id="regForm" ref="myForm" >
+    <div class="hform">
+    <h1 style="margin-bottom: 3%">Survey</h1>
+    </div>
+
+    
+
+    <div class="tab" >
+            <label class="label" v-text="Questions[currentQuestion.toString()].questionTitle"></label>
+            <p :value="index" v-for="(opt, index) in questionAnswers" >
+              <input name="rButton" ref="rButton" type="radio" :id="index" v-model="currentResult" :value="index" @change="update_results(currentQuestion, $event,1)"></input>
+              <label :for="index" v-text="opt"></label>
+            </p>
+    </div><!-- .tab -->
+  
+                  
+
+    <div style="overflow:auto;">
+      <div style="float:right">
+        <button v-show="currentQuestion>1" type="button" id="prevBtn" @click="changePage(-1)">Previous</button>
+        <button type="button" id="nextBtn" v-show="currentQuestion<34" @click="update_results(currentQuestion, $event,1)" :disabled="currentResult===null">Next</button>
+        <button type="button" id="submitBtn" v-show="currentQuestion==34">Submit</button> 
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <p v-text="currentQuestion"></p>
+    </div>
+  
+  
+  </form>
+</div>
+
+<div id="mobileModal" class="modal">
+    <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Thank you!</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="columns">
+            <div class="column">
+              <p>Thank you for taking the Survey</p>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button type="button" id="close" class="close button is-survey" >OK</button>
+        </footer>
+      </div>
+</div>
+
+<script>
+var modal = document.getElementById('mobileModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById('submitBtn');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+btn.addEventListener('click',openModal);
+
+span.addEventListener('click',closeModal);
+
+window.addEventListener('click',outsideClick);
+
+// When the user clicks the button, open the modal 
+function openModal() {
+  modal.style.display = "block";
+  console.log('aboba');
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+  modal.style.display = "none";
+  console.log('aboba');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+function outsideClick (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    console.log('aboba');
+  }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/survey_page.js"></script>
+
+ <script>
+var AppVue = new Vue({
+  el: '#app',
+  methods: {
+    finishSurvey()
+    {
+      this.surveyPassed=true;
+      console.log(this.surveyPassed)
+    },
+    changePage(arg)
+    {
+      if(arg==1)
+      {
+        if(this.currentQuestion<34)
+        {
+          this.currentQuestion=this.currentQuestion+1;
+        }
+      }
+      if(arg==-1)
+      {
+        this.currentQuestion=this.currentQuestion-1;
+      }
+    },
+
+    update_results(q_index, event,arg) 
+    {
+      this.changePage(arg)
+      this.results[q_index] = this.currentResult;
+      this.currentResult=null;
+      this.$refs.myForm.reset();
+      console.log(this.results);
+     },
+
+     sendToServer() 
+     { 
+      console.log(this.results);
+      axios.post("/m/", this.results)
+                  .then(function (response) 
+                  {
+                      response.data;
+                      console.log("as");
+                  })
+                  .catch(function (error) 
+                  {
+                      console.log(error);
+                  });
+     },
+
+  },
+  data () {
+      return {
+          surveyPassed:false,
+          currentResult:null,
+          results: {},
+          currentQuestion:1,
+          Questions: S_CONFIG.Questions,
+          questionAnswers:S_CONFIG.answers
+      }
+  },
+})
+</script>
+
+  </body>
+</html>

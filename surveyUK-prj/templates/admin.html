@@ -1,0 +1,128 @@
+<lhtml>
+  <head>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<title>Survey</title>
+
+  </head>
+  <body>
+
+    <div class="FormContentWrapper">
+      <div class="HeaderMast"></div>
+        <div class="CenteredContent">
+          <div class="FormCard">
+            <div class="Accent"></div>
+              <div class="FormContent">
+                <form> 
+                  <div class="columns">
+                    <div class="column">
+                        <h4>Admin panel</h4>
+                    </div><!--.col s6-->
+                    <div class="pass">
+                      <div class="column">
+                        <a id="modalbut" class="button is-survey">Change password</a>
+                      </div><!--.col s6-->
+                    </div>
+                  </div><!--.row-->
+
+                  
+                  <div class="columns">
+                    <div class="column">
+                      <label class="label">Periodcity</label>
+                      <input style="float:left" class="input is-primary" type="number">
+                    </div><!--.col s5-->
+                    <div class="column">
+
+                    </div><!--.input-field col s12-->
+                  </div><!--.row-->
+
+
+
+
+                  <div id="myModal" class="modal">
+                         <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Change password</p>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <div class="columns">
+                          <div class="column">
+                            <p>Current password</p>
+                            <input class="input is-primary" type="password">
+                            <p>New password</p>
+                            <input class="input is-primary" type="password">
+                            <p>Repeat new password</p>
+                            <input class="input is-primary" type="password">
+                         </div>
+                        </div>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-survey">Save changes</button>
+                        <button class="button">Cancel</button>
+                      </footer>
+                    </div>
+                  </div>
+
+
+                <div class="row">
+                  <div class="columns">
+                    <div class="column">
+                      <input id="myInput" class="input is-primary" type="text" placeholder="Search.."><br><br>
+                    </div><!--.col s5-->
+                  </div>
+                    <div class="th-width">
+                    <table class="table is-fullwidth">
+                      <thead>
+                        <tr>
+                          <th>Full name</th>
+                          <th>Date</th>
+                          <th>Result</th>
+                        </tr>
+                        <tr>
+                        </thead>
+                          <tbody id="myTable">
+                              <td><a href="info.html">Microsoft<a></td>
+                              <td>12/05/2020</td>
+                              <td>30.5</td>
+                        </tr>
+                        <tr>
+                              <td>Google</td>
+                              <td>03/30/2021</td>
+                              <td>40.63</td>
+
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>02/21/2021</td>
+                            <td>30.2</td>
+
+                        </tr>
+                        <tr>
+                            <td>IBM</td>
+                            <td>07/06/2021</td>
+                            <td>15.6</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div><!--.table-->
+              </div>
+                </form>
+
+                </div><!--.FormContent-->
+          </div><!--.FormCard-->
+        </div><!--.CenteredContent-->
+    </div><!--.FormContentWrapper-->
+
+
+
+    <script src="../static/js/modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/js/table-search.js"></script>
+
+  </body>
+</html>

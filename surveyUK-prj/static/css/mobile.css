@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  background-color: #fff;
+}
+body {
+  background-color: #fff;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  box-shadow: 0 0 12px 0 rgb(0 0 50 / 10%);
+  border-radius: 6px;
+}
+.links {
+  order: 2;
+}
+
+.hform h1 {
+  margin-bottom: 0;
+  color: #000;
+  text-transform: none;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+
+input {
+  padding: 10px;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+
+
+button {
+  background-color: #2ab8b4;
+  color: #ffffff;
+  border: none;
+  margin-left: 5px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+* {
+  outline: 0;
+  font-family: sans-serif
+}
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center
+}
+
+.Accent {
+  background-color: #2ab8b4;
+  height: 8px;
+}
+
+.tab {
+margin-bottom: 15px;
+}
+.tab p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #474747;
+}
+
+.modal-card-body {
+  width: 300px;
+  margin-left: 10%;
+}
+
+.modal-card-body input {
+  margin-bottom: 3%;
+  
+
+}
+
+.modal-card-head {
+  width: 300px;
+  margin-left: 10%;
+}
+
+.modal-card-foot {
+  width: 300px;
+  margin-left: 10%;
+}
+
+.w3table {
+  margin-top: 10%;  
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+.pass a{
+  float: none;
+}
+
+.button.is-survey {
+  background-color: #2ab8b4;
+  border-color: transparent;
+  color: #fff;
+} 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 200;
+  overflow: auto; /* Enable scroll if needed */
+}

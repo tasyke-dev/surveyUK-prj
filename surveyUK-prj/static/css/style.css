@@ -1,0 +1,381 @@
+body {
+  background-color: #e4edef;
+}
+
+form p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+}
+
+form h4 {
+    margin-bottom: 0;
+    color: #000;
+    text-transform: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+select {
+display: block !important;
+}
+
+
+.hform h4 {
+  margin-bottom: 0;
+  color: #000;
+  text-transform: none;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.button.is-survey {
+  background-color: #2ab8b4;
+  border-color: transparent;
+  color: #fff;
+} 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 200;
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 1000%;
+}
+
+/* The Close Button */
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-card-body {
+  width: 400px;
+  margin-left: 20%;
+}
+
+.modal-card-body input {
+  margin-bottom: 3%;
+}
+
+.modal-card-head {
+  width: 400px;
+  margin-left: 20%;
+}
+
+.modal-card-foot {
+  width: 400px;
+  margin-left: 20%;
+}
+
+.field label {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+}
+
+.field input{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;  
+}
+.field button{
+  margin-top: 3%;
+  right: 50%;
+  left: 40%;
+  width: 20%;
+}
+.field h4{
+  text-align: center;
+}
+
+.HeaderMast {
+  height: 278px;
+  background: #338ca6;
+}
+
+.FormContent {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0,0,0,.87);
+  padding: 20px 35px;
+}
+
+.FormContentWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column
+}
+
+.Accent {
+  background-color: #2ab8b4;
+  height: 8px;
+}
+
+.CenteredContent {
+  margin: auto;
+  width: 800px; 
+}
+
+.FormCard {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  margin-bottom: 48px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  word-wrap: break-word
+}
+
+.FormCard:first-of-type {
+  margin-top: -100px
+}
+
+.HeaderTitle {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 34px;
+  line-height: 135%;
+  max-width: 100%;
+  min-width: 0%;
+  margin-bottom: 22px
+
+}
+
+.w3-panel.w3-card {
+  height: 250px;
+}
+
+.w3table {
+ margin-top: 5%;  
+ margin-left: 5%;
+ margin-right: 5%;
+}
+
+ .table th {
+   width: 1%;
+ }
+ 
+
+.pass a {
+ padding: 0 1rem;
+ float: right;
+}
+.UserInfo p{ 
+  font-size: medium;
+  margin: 26px;
+}
+
+.UserData p{ 
+  font-size: medium;
+  padding: 5px;
+}
+
+* {
+  outline: 0;
+  font-family: sans-serif
+}
+body {
+  background-color: #fafafa
+}
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center
+}
+
+/*Styling Selectbox*/
+.dropdown {
+  width: 300px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  height: 100%;
+  text-align: left;
+  margin: 14px;
+}
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+.dropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown:active {
+    background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+.dropdown.active .select > i {
+    transform: rotate(-90deg)
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+
+@media (max-width: 660px) {
+  .HeaderMast {
+    height: 122px;
+  }
+  .FormCard:first-of-type {
+    margin-top: -50px;
+  }
+
+  .CenteredContent {
+    width: 90%;
+  }
+  .dropdown {
+    width: 210px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    text-align: left;
+  }
+  .w3-panel.w3-card {
+    width: 100%;
+  }
+  
+  
+  .UserInfo p{ 
+    font-size: medium;
+    margin: 26px;
+  }
+  
+  .UserData p{ 
+
+    font-size: medium;
+    padding: 5px;
+  }
+  .infoMobile{display: block !important;}
+  .infoDesktop{display: none !important;}
+
+  .infoMobile .row .col{
+    padding: 0px;
+  }
+
+  .modal-card-body {
+    width: 300px;
+    margin-left: 10%;
+  }
+  
+  .modal-card-body input {
+    margin-bottom: 3%;
+    
+
+  }
+  
+  .modal-card-head {
+    width: 300px;
+    margin-left: 10%;
+  }
+  
+  .modal-card-foot {
+    width: 300px;
+    margin-left: 10%;
+  }
+
+  .w3table {
+    margin-top: 10%;  
+    margin-left: 5%;
+    margin-right: 5%;
+   }
+
+  .pass a{
+    float: none;
+  }
+  
+}
+div.error {
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 0.8rem;
+  color: #FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+
+
+
